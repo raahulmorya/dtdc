@@ -1,4 +1,8 @@
 import { Inter } from "next/font/google";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
+
 import "./globals.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
@@ -17,10 +21,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.png" />
-        <script
-          src="https://kit.fontawesome.com/a076d05399.js"
-          crossorigin="anonymous"
-        ></script>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body className={inter.className}>
         <Header />

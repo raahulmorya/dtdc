@@ -1,6 +1,7 @@
 
 
 * {
+  
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -8,6 +9,7 @@
 
 html,
 body {
+  font-family: "Manrope", serif;
   max-width: 100vw;
   overflow-x: hidden;
   position: relative; /* Required for positioning the pseudo-element */
@@ -22,8 +24,10 @@ body::before {
   width: 100%; 
   height: 100%; 
   background-image: url("/background.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  filter: blur(10px); 
-   z-index: -1; 
+  background-size: cover;      
+  background-position: center;    
+  background-repeat: no-repeat;    
+  background-attachment: fixed;   
+  filter: blur(4px); 
+   z-index: -3; 
 }

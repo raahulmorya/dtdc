@@ -1,6 +1,126 @@
 .footer {
+  color: #0e2c53;
   background-color: #f8f9fa;
   padding: 1rem;
   text-align: center;
-  
+  border-top-left-radius: 90px;
+  border-top-right-radius: 90px;
+  padding: 50px 30px;
+  padding-bottom: 10px;
+  height: auto;
+  margin-top: 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 10px;
+}
+
+.strong {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  gap: 20px;
+}
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.social > p {
+  font-weight: bold;
+}
+.social > svg {
+  height: 40px;
+  width: 40px;
+}
+
+.container > div:nth-child(1) > p {
+  font-size: 30px;
+  font-weight: bolder;
+  margin: 40px 20px;
+}
+.container > div:nth-child(1) > p > span {
+  font-size: 40px;
+  font-weight: bolder;
+}
+.container > div:nth-child(1) > p > img {
+  height: 30px;
+  width: 160px;
+  padding: 0px 14px;
+}
+
+.copyright {
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 1750px) {
+  .container {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .container > div:nth-child(1) {
+    width: 100%;
+  }
+  .container > div:nth-child(1) > p {
+    font-size: 14px;
+    font-weight: bolder;
+    margin: 40px 0px;
+    margin-bottom: 20px;
+  }
+  .container > div:nth-child(1) > p > span {
+    font-size: 30px;
+    font-weight: bolder;
+  }
+  .container > div:nth-child(1) > p > img {
+    height: 14px;
+    width: 80px;
+    padding: 0px 4px;
+  }
+
+  .flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 10px;
+  }
+  .strong {
+    margin: 0px 20px;
+    font-size: 12px;
+    text-align: left;
+    gap: 10px;
+  }
+
+  .social {
+    font-size: 12px;
+    gap: 3px;
+    margin:10px 0px;
+  }
+  .social > svg {
+    height: 25px;
+    width: 25px;
+  }
+
+  .copyright {
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
 }

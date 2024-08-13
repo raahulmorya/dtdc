@@ -1,5 +1,12 @@
+.fullContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height:fit-content;
+  color: white;
 
-
+}
 /* Tablet and Smaller Desktop */
 @media (min-width: 701px) and (max-width: 1120px) {
  
