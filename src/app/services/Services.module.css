@@ -170,7 +170,7 @@
   border: solid white 4px;
   width: 90vw;
   padding: 10px 10px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .dtdccontent > div > img {

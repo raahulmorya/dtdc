@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Link from 'next/link';
 import styles from "./welcome.module.css";
+
 import Image from "next/image";
 export default function Welcome() {
   return (
@@ -9,12 +10,12 @@ export default function Welcome() {
       <div className={styles.background}></div>
       <div className={styles.hero}>
         <p>Welcome to </p>
-        <div class={styles.typingContainer}>
-          <h1 class={styles.typingEeffect}>Sumitra Express</h1>
+        <div className={styles.typingContainer}>
+          <h1 classNames={styles.typingEeffect}>Sumitra Express</h1>
         </div>
-        <div class={styles.flippingTextContainer}>
+        <div className={styles.flippingTextContainer}>
           <span>We deliver </span>
-          <span class={styles.flippingText}>
+          <span className={styles.flippingText}>
             <span>Domestic</span>
             <span>International</span>
             <span>Fast</span>
