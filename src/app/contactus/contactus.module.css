@@ -4,6 +4,8 @@
     justify-content: center;
     align-items: center;
     color: white;
+          margin-top: 130px;
+
 }
 
 .center h1:nth-child(1) {
@@ -43,6 +45,10 @@
 
 
 @media screen and (max-width: 1750px) {
+  .center{
+          margin-top: 80px;
+
+  }
   .center h1:nth-child(1) {
         height:auto;
         margin-bottom: 20px;

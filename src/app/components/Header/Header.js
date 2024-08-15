@@ -3,8 +3,10 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faBars, faPhone } from "@fortawesome/free-solid-svg-icons";
 import headerStyles from "./Header.module.css";
+import Contact from "../phone/phone";
 
 export default function Header() {
   const [displayMenu, setDisplayMenu] = useState(false);
@@ -14,13 +16,7 @@ export default function Header() {
   };
 
   useEffect(() => {
-    // Check screen width on component mount
-    const mediaQuery = window.matchMedia("(min-width: 1750px)");
-    if (mediaQuery.matches) {
-      setDisplayMenu(true);
-    }
-
-    // Optional: listen for window resize to dynamically change the state
+    // Function to handle menu display based on screen width
     const handleResize = () => {
       if (window.innerWidth >= 1750) {
         setDisplayMenu(true);
@@ -29,20 +25,35 @@ export default function Header() {
       }
     };
 
+    // Check screen width on component mount
+    handleResize();
+
+    // Listen for window resize to dynamically change the state
     window.addEventListener("resize", handleResize);
 
+    // Cleanup listener on component unmount
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   const closeMenu = () => {
-    setDisplayMenu(false);
+     if (window.innerWidth >= 1750) {
+        setDisplayMenu(true);
+      } else {
+        setDisplayMenu(false);
+      }
+    // setDisplayMenu(false);
     console.log("Menu closed");
   };
 
   return (
     <header className={headerStyles.header}>
+      <div className={headerStyles.contact}>
+        <FontAwesomeIcon icon={faPhone} />
+        <FontAwesomeIcon icon={faWhatsapp} />
+        <Contact />
+      </div>
       <div className={headerStyles.mainbar}>
         <div className={headerStyles.nav}>
           <ul>

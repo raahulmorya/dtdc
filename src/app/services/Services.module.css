@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  margin-top:130px;
 }
 
 .services > p {
@@ -124,6 +125,10 @@
 }
 
 @media screen and (max-width: 1350px) {
+  .services{
+      margin-top: 80px;
+
+  }
   .services > p {
     font-size: 40px;
     font-weight: bold;

@@ -14,6 +14,8 @@ body {
   overflow-x: hidden;
   position: relative; /* Required for positioning the pseudo-element */
   min-height: 100vh; /* Ensures the body covers the full viewport height */
+      /* scroll-behavior: smooth; */
+
 }
 
 body::before {
